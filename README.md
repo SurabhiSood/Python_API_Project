@@ -1,9 +1,20 @@
-### BankingDesertHeatMap-
+## BankingDesertHeatMap-
 
-* Analysed relationship between poverty, age, and population with the number of banks in a given area
-* Pulled Data using census data for every zip code across the country.  
-* Visualizing data by creating layered maps with Google maps and API.
+### Goal
+To analyse "What is the relationship between poverty, age, and population with the number of banks in a given area?" 
 
+###Process
+the first step was to generate the census data using Census API and a help from [Github guide](https://github.com/CommerceDataService/census-wrapper for library documentation). I ran census to retrieve data on all zip codes (2013 ACS5 Census). Then I created a dataframe containing columns [ZipCode,Population,Poverty Rate].I also stored this dataframe as csv.
+
+Then I read in another csv containing data of bank locations in terms of latitude and longitude.Furthemore, I merged the two csvs post checking the merge on key, data type.
+
+The final step was to create the map. I created one map layer by configuring gmaps with API key and creating a heat map based on poverty rate of the region.![PovertyMap](https://github.com/SurabhiSood/Python_API_Visualizations/blob/master/Banking_Desert_HeatMap/Images/heatmap.png)
+
+Another layer consists of the bank details.![bank](https://github.com/SurabhiSood/Python_API_Visualizations/blob/master/Banking_Desert_HeatMap/Images/bank_map.png)
+
+The final Map was created by merging the two layers together.![Final](https://github.com/SurabhiSood/Python_API_Visualizations/blob/master/Banking_Desert_HeatMap/Images/final_map.png)
+
+---
 ## WeatherPy-
 
 ### Goal
