@@ -14,7 +14,6 @@ Another layer consists of the bank details.![bank](https://github.com/SurabhiSoo
 
 The final Map was created by merging the two layers together.![Final](https://github.com/SurabhiSood/Python_API_Visualizations/blob/master/Banking_Desert_HeatMap/Images/final_map.png)
 
----
 ## WeatherPy-
 
 ### Goal
@@ -36,8 +35,12 @@ Because all four charts would share similar attributes, I created a function to 
 
  
 
-### VacationPy-
+## VacationPy-
 
-* Based on data drawn from WeatherPy VacationPy narrows down cities on selective weather conditions
-* Using google places API,listed the first hotel for each city located within 5000 meters of your coordinates.
-* Plotted hotels on gmap using markers
+### Goal
+Using WeatherPy narrow down cities on selective weather conditions
+
+### Process
+After reading the csv created during WeatherPy.I created a Humidity HeatMap using google places API.I wrote the code to list the first hotel for each city located within 5000 meters of the coordinates.
+
+Next step was to plot the hotels on gmap using markers and create another heat map layer based on Humidity. Once I obtained all the information.I narrowed down my search based on my ideal weather conditions.![Map](https://github.com/SurabhiSood/Python_API_Visualizations/blob/master/VacationPy/MarkerMap.png)
