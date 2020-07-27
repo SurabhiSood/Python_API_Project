@@ -1,36 +1,32 @@
-# Projects based on APIs and pandas dataframe
+### BankingDesertHeatMap-
 
-*BankingDesertHeatMap-
+* Analysed relationship between poverty, age, and population with the number of banks in a given area
+* Pulled Data using census data for every zip code across the country.  
+* Visualizing data by creating layered maps with Google maps and API.
 
--Social economists have long noted a trend that in geographic areas with higher poverty rates, there is often a dearth of reputable
-banks or financial services. 
+## WeatherPy-
 
--The shortage leads to higher rates of financial victimization in these areas.
+### Goal
+Analyze at least 500 randomly selected cities around the world to prove that the weather gets hotter as one approaches the equator using the Open Weather Map API.
 
--This project, combines the data from the US Census, Google Maps, and Google Places
+### Process
+The first step was to generate a random list of at least 500 cities around the world for an unbiased sampling. Random latitudes and longitudes were created using the NumPy library and the city nearest those coordinates were found using citipy and stored in a list.
 
--And Visualize the relationship between various socioeconomic factors and the number of banks in a given zip code.
+### An empty data frame was then created to store data pulled from the Open Weather Map API. Using df.iterrows(), the API was pinged and information on cloudiness, country name, date, humidity, latitude, longitude, max temperatures, and wind speed were pulled. The data was stored in the empty data frame and exported as a csv file.
 
--Skills:
-• Python
-• Pandas
-• Google Maps
-• Google Places
-• Matplotlib
-• APIs
+Next was to create scatter plots for four comparisons:
 
-*WeatherPy-
+* Latitude vs. Temperature [Plot1](https://github.com/SurabhiSood/Python_API_Visualizations/blob/master/WeatherPy/Plot1.png)
+* Latitude vs. Humidity [Plot2](https://github.com/SurabhiSood/Python_API_Visualizations/blob/master/WeatherPy/Plot2.png)
+* Latitude vs. Cloudiness [Plot3](https://github.com/SurabhiSood/Python_API_Visualizations/blob/master/WeatherPy/Plot3.png)
+* Latitude vs. Wind Speed [Plot4](https://github.com/SurabhiSood/Python_API_Visualizations/blob/master/WeatherPy/Plot4.png)
 
--Analysed changes in weather with respect to distance from the equator.
+Because all four charts would share similar attributes, I created a function to plot each chart, so that I would only have to input the y-values and labels. However, the data types in the data frame were all strings, so I used pd.to_numeric() on all relevant columns in order to plot the data.
 
--Pulled data from OpenWeatherMap API to assemble a dataset on over 500 cities.
+ 
 
--Summary statistics and visualizations created using Python,Pandas and Matplotlib
+### VacationPy-
 
-*VacationPy-
-
--Based on data drawn from WeatherPy VacationPy narrows down cities on selective weather conditions
-
--Using google places API,listed the first hotel for each city located within 5000 meters of your coordinates
-
--Plotted hotels on gmap using markers
+* Based on data drawn from WeatherPy VacationPy narrows down cities on selective weather conditions
+* Using google places API,listed the first hotel for each city located within 5000 meters of your coordinates.
+* Plotted hotels on gmap using markers
